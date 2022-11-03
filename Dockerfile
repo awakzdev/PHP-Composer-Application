@@ -33,4 +33,5 @@ RUN mv default /etc/nginx/sites-available/example \
 RUN mv index.php /var/www/html \
     && chmod -R 777 /var/www/html
 
+# Executeable permission for Linux on docker_entry.sh && Execute file
 CMD ["chmod", "+x", "./docker_entry.sh"]
