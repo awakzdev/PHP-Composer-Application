@@ -36,4 +36,4 @@ RUN mv index.php /var/www/html \
 # Executable permission for Linux on docker_entry.sh
 RUN chmod +x docker_entry.sh
 
-CMD ["chmod", "+x", "./docker_entry.sh"]
+CMD "./docker_entry.sh"]
