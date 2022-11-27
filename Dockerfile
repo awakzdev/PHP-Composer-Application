@@ -14,7 +14,7 @@ RUN apt-get update && apt-get install -y \
 	&& docker-php-ext-configure gd --with-freetype --with-jpeg \
 	&& docker-php-ext-install -j$(nproc) gd
 
-# Composer Caching - if there's a change to the composer.json file only then reinstall composer.setup and all layers below
+# Composer Caching
 COPY composer.json /app
 
 # Installing Composer
@@ -22,7 +22,7 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && php composer-setup.php --install-dir=/usr/local/bin --filename=composer \
     && composer install
 
-# Setting directory - Install everything below every run
+# Setting directory - Install everything below every run regardless of changes
 COPY . /app
 
 # Move nginx conf && enable virtual host config file
