@@ -1,5 +1,5 @@
 # Introduction 
-This application serves as a baseline for a deployment pipeline development. It builds into a dynamic PHP application served via apache/nginx and deomnstrated a working sleep timer.
+This application serves as a baseline for a deployment pipeline development. It builds into a dynamic PHP application served via apache/nginx and demonstrated a working sleep timer.
 
 # Getting Started
 
