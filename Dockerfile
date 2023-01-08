@@ -22,7 +22,7 @@ RUN php -r "copy('https://getcomposer.org/installer', 'composer-setup.php');" \
     && php composer-setup.php --install-dir=/usr/local/bin --filename=composer \
     && composer install
 
-# Setting directory
+# Setting caching
 COPY . /app
 
 # Move nginx conf && enable virtual host config file
